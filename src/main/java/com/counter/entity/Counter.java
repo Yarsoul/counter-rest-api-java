@@ -26,11 +26,6 @@ public class Counter {
         this.count = count;
     }
 
-//    public Counter(String name, int count) {
-//        this.name = name;
-//        this.count = count;
-//    }
-
     public int getId() {
         return id;
     }
