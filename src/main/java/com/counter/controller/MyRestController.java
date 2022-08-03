@@ -49,7 +49,9 @@ public class MyRestController {
         if (counter == null) {
             throw new NoSuchCounterException("Counter with id = " + counterId + " not found");
         }
-        int newCount = requestIncrement.getIncrementCount();
+        int oldCount = counter.getCount();
+        int incrementCount = requestIncrement.getIncrementCount();
+        int newCount = oldCount + incrementCount;
         counter.setCount(newCount);
         counterService.updateCount(counter);
 
